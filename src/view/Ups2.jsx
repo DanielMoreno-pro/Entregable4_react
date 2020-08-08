@@ -51,7 +51,7 @@ class Ups2 extends Component {
 
     
     if(!this.state.edit) {
-        const url ='http://localhost:5001/api/upss';
+        const url ='https://ups-lb-api1-cheerful-lemur-bm.mybluemix.net/api/upss';
 
         axios.post(url, data)
 	        .then(res => console.log(res.data));
@@ -66,7 +66,7 @@ class Ups2 extends Component {
     }
     else {
 
-        const url ='http://localhost:5001/api/upss/'+this.state.id;
+        const url ='https://ups-lb-api1-cheerful-lemur-bm.mybluemix.net/api/upss/'+this.state.id;
 
         const data = { Modelo:this.frmModelUps.value, 
                        NumSerie:this.frmNumSerie.value,
